@@ -1,24 +1,48 @@
 import logo from './logo.svg';
 import './App.scss';
+import ListTodo from './todos/ListTodo';
+import MyComponent from './examples/MyComponent';
 
-function App() {
+
+import NavComponent from './navs/NavComponent';
+import Home from './examples/Home';
+import ListUser from './Users/ListUser';
+import DetailUser from './Users/DetailUser';
+
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
+
+const App = () => {
   return (
+    <Router>
     <div className="App">
       <header className="App-header">
+      <NavComponent/>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* <ListTodo/> */}
+        <Switch>
+          <Route path="/" exact>
+            <Home/>
+          </Route>
+          <Route path="/todo">
+            <ListTodo/>
+          </Route>
+          <Route path="/about">
+            <MyComponent/>
+          </Route>
+          <Route path="/user" exact>
+            <ListUser />
+          </Route>
+          <Route path="/user/id=:id">
+            <DetailUser />
+          </Route>
+        </Switch>
       </header>
+      <main>
+        
+      </main>
     </div>
+    </Router>
   );
 }
 

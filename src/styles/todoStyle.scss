@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.btn{
+    width: 5rem;
+    display: inline-block;
+    color: #4db5ff;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;                
+    border: 1px solid grey;
+    transition: all 400ms ease;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #c5d2db;
+    border-color: transparent;
+}
+.btn-primary{
+    background: #4db5ff;
+    color: white;
+}
+.btn-edit{
+    background: #73dd6a;
+    color: white;
+}
+.btn-delete{
+    background: #cf3750;
+    color: white;
+}
+.btn-save{
+    background: #578fce;
+    color: white;
+}
+.text-input{
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;                
+    border: 1px solid grey;
+    width: max-content;
+}
+.list-todo-container{
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    .add-list-todo{
+        
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid grey;
+
+    
+
+    }
+    .list-todo-content{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        .todo-child{
+            display: grid;
+            grid-template-columns: 2fr 0.5fr 0.5fr;
+            gap: 1rem;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid grey;
+            text-align: left;          
+        }
+
+    }
+}
